@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bigsur-modal Docs</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        code {
+            padding:10px;border-radius:10px;background:#000020;
+            display:block;
+            border: 1px solid rgba(255,255,255,0.3)
+        }
+        pre {display:inline;font-size:13px}
+        .html-tag,.js-key {color:#8383e3}
+        .html-attr,.js-varName {color:#d386ff}
+        .js-func,.html-attrVal {color:#78ee78}
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex justify-between">
+    <div class="w-1/4 h-content flex flex-col bg-gray-700 m-16 pl-8 py-8 rounded-lg shadow-xl">
+        <a href="#" class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
+            <div class="font-light rounded-lg">Installation</div>
+        </a>
+        <a href="#" class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
+            <div class="font-light rounded-lg">Usage</div>
+        </a>
+        <a href="#" class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
+            <div class="font-light rounded-lg">Customization</div>
+        </a> 
+    </div>
+    <div class="w-3/4 p-12">
+        <h1 class="text-gray-100 font-black text-5xl">Big Sur Modal Docs</h1>
+        <br>
+        <div id="installation">
+            <h2 class="text-gray-100 font-extralight text-3xl">Installation</h2>
+                <p>The code for Big Sur Modal is hosted <a class="underline" href="https://pineapplerind.ga/libraries/bigsur-modal">here.</a></p>
+                <p>You can put it in your project like this:</p>
+                <br>
+                <code class="code">
+<pre>
+<span>&lt;</span><span class="html-tag">script</span> <span class="html-attr">src</span>=<span class="html-attrVal">"https://pineapplerind.ga/libraries/bigsur-modal"</span><span>&gt;&lt;/</span><span class="html-tag">script</span>>
+</pre>
+                </code>
+                <br>
+            <b>Make sure to include it above your code.</b>
+            <br>                <br>
+        </div>
+        <div id="usage">
+            <h2 class="text-gray-100 font-extralight text-3xl">Usage</h2>
+        </div>
+        <button onclick="initmod()" class="bg-blue-500 rounded px-4 py-2">Modal</button>
+    </div>
+    <script src="index.js"></script>
+    <script>
+        function initmod() {
+            let modal = new BigSurModal({
+                title: "Are you sure you want to close the Console window?",
+                desc: "That's so grapy. Do you really want to close it?", 
+                buttons: [
+                    {name: "Cancel",default: true},
+                    {name: "OK",default: false}
+                ],
+                appIcon: 'console_logo.png'
+            })
+            modal.init()
+        }
+    </script>
+</body>
+</html>
