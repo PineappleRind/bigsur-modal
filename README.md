@@ -16,59 +16,57 @@ var modal = new BigSurModal({
     //arguments here, more info in customization section
 })
 ```
-## Then initialize it with the .show() function:</p>
-                <code>
-                    <pre>
-<span class="js-var">modal</span>.<span class="js-func">show</span>()</pre></code>
-                <p>
-                    Similarly, you can remove any open modal with the .close() function:
-                </p>
-                <code>
-                    <pre>
-<span class="js-var">modal</span>.<span class="js-func">close</span>()</pre></code>
-                    </pre>
-                </code>
-        </div>
-        <hr>
-        <div id="customization">
-            <h2 class="text-gray-100 font-extralight text-3xl">Customization</h2>
-            <p>Pass an object into the BigSurModal function with title, description, and buttons.</p>
-            <br>
-            <h3 class="text-gray-100 font-extralight text-2xl">Arguments</h3>
-            <b>title: </b> The modal title. String.<br>
-            <b>description: </b> The modal description. String.<br>
-            <b>appIcon: </b> The application icon to show. Can be URL OR path. String. Optional.<br>
-            <b>theme: </b> The modal theme. Defaults are <inlinecode>light</inlinecode> and <inlinecode>dark</inlinecode>. More info in the <a href="#">Theming</a> section. String. Optional.<br>
-            <b>buttons: Array of objects. Object arguments are below. Optional.</b>
-            <br><br>
-            <h3 class="text-gray-100 font-extralight text-2xl">Button Arguments</h3>
-            <b>Name: </b> Button name. String.<br>
-            <b>Default: </b> If true: makes the button blue; can get clicked by pressing Enter key; and is the "default" button. Boolean. Optional.<br>
-            <b>Function: </b> If included, specifies the function to call when the button is pressed ALONG WITH CLOSING THE MODAL. If not included, the button on click just closes the modal. String. Optional.<br>
-    <code class="code">
-        <pre>
-<span class="js-key">var </span><span class="js-var">modal </span>= <span class="js-key">new </span><span class="js-func">BigSurModal</span>({
-    <span>title: </span><span class="js-str">'Modal Title!'</span>, 
-    <span>description: </span><span class="js-str">'Modal description!'</span>,
-    <span>theme: </span><span class="js-str">'dark'</span>,  
-    <span>appIcon: </span><span class="js-str">'https://data.tooliphone.net/iskin/themes/14241/15260/preview-256.png'</span>,
+
+Then initialize it with the .show() function:</p>
+
+```javascript
+var modal = new BigSurModal({
+    //arguments here, more info in customization section
+})
+```
+Similarly, you can remove any open modal with the .close() function:
+```javascript
+modal.close()
+```
+
+# Customization
+Pass an object into the BigSurModal function with title, description, and buttons.
+
+
+## Arguments
+`title`: The modal title. String.
+`description`: The modal description. String.
+`appIcon`: The application icon to show. Can be URL OR path. String. Optional.
+`theme`: The modal theme. Defaults are `light` and `dark`. String. Optional.
+`buttons`: Array of objects. Object arguments are below. Optional.
+
+## Button Arguments
+`name`: Button name. String.
+`default`: If true: makes the button blue; can get clicked by pressing Enter key; and is the "default" button. Boolean. Optional.
+`function`: If included, specifies the function to call when the button is pressed ALONG WITH CLOSING THE MODAL. If not included, the button on click just closes the modal. String. Optional.
+
+```javascript
+var modal = new BigSurModal({
+    title: 'Modal Title!', 
+    description: 'Modal description!',
+    theme: 'dark',  
+    appIcon: 'https://data.tooliphone.net/iskin/themes/14241/15260/preview-256.png',
       
     buttons: [
-        {name: <span class="js-str">'Cancel'</span>, function: <span class="js-str">'alert("Are you sure?")'</span>}, 
-        {name: <span class="js-str">'OK'</span>, default: <span class="js-bool">true</span>}
+        {name: 'Cancel', function: 'alert("Are you sure?")'}, 
+        {name: 'OK', default: true}
     ],
-})</pre></code>
-        </div>
-        <hr>
-        <div id="changelog">
-            <h2 class="text-gray-100 font-extralight text-3xl">Changelog</h2>
-            <ul>
-                <li><b>Wed, Aug 18</b> Initial commit. Version 1.0.0.</li>
-                <li><b>Wed, Aug 22</b>Added dark mode. Version 1.1.0.</li>
-            </ul>
-        </div>
-        <hr>
-        <h3 class="text-gray-100 font-extralight text-2xl">About</h3>
-        <p>Written by <a href="https://pineapplerind.ga">PineappleRind</a></p>
-        <p>Current Version: 1.1.0 Public Beta</p>
-    </div>
+})
+```
+# Changelog
+**Wed, Aug 18** Initial commit. Version **1.0.0**.
+**Sun, Aug 22** Added dark mode. Version **1.0.1**.
+
+# About
+Written by PineappleRind
+Current Version: 1.0.1 Public Beta
+
+*bigsur-modal follows this version naming scheme:*
+*First number for major releases*
+*Second number for feature additions*
+*Third number for bug fixes/minor feature additions*
