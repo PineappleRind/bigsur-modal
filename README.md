@@ -59,14 +59,9 @@ var modal = new BigSurModal({
 })
 ```
 # Changelog
-**Wed, Aug 18** Initial commit. Version **1.0.0**.
-**Sun, Aug 22** Added dark mode. Version **1.0.1**.
+**Wed, Aug 18** Initial commit. Version **1.0**.
+**Sun, Aug 22** Added dark mode. Version **1.1**.
 
 # About
 Written by PineappleRind
-Current Version: 1.0.1 Public Beta
-
-*bigsur-modal follows this version naming scheme:*
-*First number for major releases*
-*Second number for feature additions*
-*Third number for bug fixes/minor feature additions*
+1.0 Public Beta
