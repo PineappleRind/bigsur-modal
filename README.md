@@ -35,15 +35,22 @@ Pass an object into the BigSurModal function with title, description, and button
 
 ## Arguments
 `title`: The modal title. String.
+
 `description`: The modal description. String.
+
 `appIcon`: The application icon to show. Can be URL OR path. String. Optional.
+
 `theme`: The modal theme. Defaults are `light` and `dark`. String. Optional.
+
 `buttons`: Array of objects. Object arguments are below. Optional.
 
 ## Button Arguments
 `name`: Button name. String.
+
 `default`: If true: makes the button blue; can get clicked by pressing Enter key; and is the "default" button. Boolean. Optional.
+
 `function`: If included, specifies the function to call when the button is pressed ALONG WITH CLOSING THE MODAL. If not included, the button on click just closes the modal. String. Optional.
+
 
 ```javascript
 var modal = new BigSurModal({
