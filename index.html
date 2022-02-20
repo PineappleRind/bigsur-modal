@@ -6,12 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bigsur-modal Docs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@105.4,306;105.4,494;105.4,697;105.4,783;105.4,900&display=swap"
+        rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <style>
         html {
             scroll-behavior: smooth;
+            font-family: 'Inconsolata', 'Fura Code NF', 'Courier New', Courier, monospace;
         }
-        
+
         code {
             padding: 10px;
             border-radius: 10px;
@@ -21,7 +27,7 @@
             overflow-x: scroll;
             margin: 10px;
         }
-        
+
         inlinecode {
             padding: 5px;
             border-radius: 10px;
@@ -31,39 +37,39 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
             overflow-x: scroll;
         }
-        
+
         hr {
             margin: 30px 0
         }
-        
+
         pre {
             display: inline;
             font-size: 13px
         }
-        
+
         .html-tag,
         .js-key {
             color: #8383e3
         }
-        
+
         .html-attr,
         .js-var {
             color: #d386ff
         }
-        
+
         .js-func,
         .html-attrVal {
             color: #78ee78
         }
-        
+
         .js-com {
             opacity: 0.4
         }
-        
+
         .js-str {
             color: #e3e36f;
         }
-        
+
         .js-bool {
             color: #4949ba
         }
@@ -73,19 +79,24 @@
 
 <body class="bg-gray-900 text-white flex justify-between">
     <div class="w-1/4 fixed z-10 right-0 hidden flex-col bg-gray-700 m-8 mt-16 pl-8 py-8 rounded-lg shadow-xl md:flex">
-        <a href="#home" class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
+        <a href="#home"
+            class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
             <div class="font-light rounded-lg">Home</div>
         </a>
-        <a href="#installation" class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
+        <a href="#installation"
+            class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
             <div class="font-light rounded-lg">Installation</div>
         </a>
-        <a href="#usage" class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
+        <a href="#usage"
+            class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
             <div class="font-light rounded-lg">Usage</div>
         </a>
-        <a href="#customization" class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
+        <a href="#customization"
+            class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
             <div class="font-light rounded-lg">Customization</div>
         </a>
-        <a href="#changelog" class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
+        <a href="#changelog"
+            class="transition duration-200 m-0.5 w-full hover:opacity-70 transform hover:-translate-y-px block">
             <div class="font-light rounded-lg">Changelog</div>
         </a>
     </div>
@@ -94,7 +105,8 @@
         <br><br>
         <div id="home">
             <h2 class="text-gray-100 font-extralight text-3xl">Home</h2>
-            <p>Big Sur Modal is a lightweight <b>(2.1KB minified)</b> library that you can use to make modals in the style of MacOS Big sur. Click here for a demo:
+            <p>Big Sur Modal is a lightweight <b>(2.1KB minified)</b> library that you can use to make modals in the
+                style of MacOS Big sur. Click here for a demo:
             </p>
             <button class="bg-blue-500 text-white px-4 py-2 rounded-xl" onclick="modal.init()">Show</button>
             <br>
@@ -102,7 +114,8 @@
         <hr>
         <div id="installation">
             <h2 class="text-gray-100 font-extralight text-3xl">Installation</h2>
-            <p>The code for Big Sur Modal is hosted <a class="underline" href="https://pineapplerind.ga/libraries/bigsur-modal">here.</a></p>
+            <p>The code for Big Sur Modal is hosted <a class="underline"
+                    href="https://pineapplerind.ga/libraries/bigsur-modal">here.</a></p>
             <p>You can put the JS and CSS files in your project like this:</p>
             <code class="code">
 <pre>
@@ -118,8 +131,8 @@
                 Initialize a modal:</p>
             <code class="code">
                     <pre>
-<span class="js-key">var </span><span class="js-var">modal </span>= <span class="js-key">new </span><span class="js-func">bigSur.Modal</span>({
-    <span class="js-com">//arguments here, more info in customization section</span>
+<span class="js-key">var </span><span class="js-var">modal </span>= <span class="js-key">new </span><span class="js-var">bigSur</span>.<span class="js-func">Modal</span>({
+    <span class="js-com">// arguments here, more info in customization section</span>
 })</pre></code>
             <p>Then initialize it with the .show() function:</p>
             <code>
@@ -150,8 +163,10 @@
             <br><br>
             <h3 class="text-gray-100 font-extralight text-2xl">Button Arguments</h3>
             <b>Name: </b> Button name. String.<br>
-            <b>Default: </b> If true: makes the button blue; can get clicked by pressing Enter key; and is the "default" button. Boolean. Optional.<br>
-            <b>Function: </b> If included, specifies the function to call when the button is pressed ALONG WITH CLOSING THE MODAL. If not included, the button on click just closes the modal. String. Optional.<br>
+            <b>Default: </b> If true: makes the button blue; can get clicked by pressing Enter key; and is the "default"
+            button. Boolean. Optional.<br>
+            <b>Function: </b> If included, specifies the function to call when the button is pressed ALONG WITH CLOSING
+            THE MODAL. If not included, the button on click just closes the modal. String. Optional.<br>
             <code class="code">
         <pre>
 <span class="js-key">var </span><span class="js-var">modal </span>= <span class="js-key">new </span><span class="js-func">BigSurModal</span>({
@@ -170,9 +185,10 @@
         <div id="changelog">
             <h2 class="text-gray-100 font-extralight text-3xl">Changelog</h2>
             <ul>
-                <li><b>Wed, Aug 18</b> Initial commit. Version 1.0.0.</li>
-                <li><b>Sun, Aug 22</b> Added dark mode. Version 1.1.0.</li>
-                <li><b>Wed, Sep 15</b> Bug fixes & improvements. Version 1.1.1.</li>
+                <li><b>2021-08-18</b> Initial commit. Version 1.0.0.</li>
+                <li><b>2021-08-22</b> Added dark mode. Version 1.1.0.</li>
+                <li><b>2021-09-15</b> Bug fixes & improvements. Version 1.1.1.</li>
+                <li><b>2022-02-20</b> 2022 code refactor. Version 1.1.2.</li>
             </ul>
         </div>
         <hr>
@@ -185,21 +201,21 @@
     <script>
         //setTimeout(function(){
         var modal = new bigSur.Modal({
-                title: "A Big Sur Modal!",
-                description: "This is a big sur modal.",
-                theme: 'dark',
-                buttons: [{
-                    name: "Cancel",
-                    default: false
-                }, {
-                    name: "OK",
-                    default: true,
-                    function: function(){
-                        alert('You can add a JavaScript function to be called on each button click!')
-                    }
-                }],
-                appIcon: 'console_logo.png'
-            })
+            title: "A Big Sur Modal!",
+            description: "This is a big sur modal.",
+            theme: 'dark',
+            buttons: [{
+                name: "Cancel",
+                default: false
+            }, {
+                name: "OK",
+                default: true,
+                function: function () {
+                    alert('You can add a JavaScript function to be called on each button click!')
+                }
+            }],
+            appIcon: 'console_logo.png'
+        })
             //})
     </script>
 </body>
