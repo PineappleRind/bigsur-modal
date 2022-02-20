@@ -1,0 +1,2 @@
+- Make the modal actually an HTMLElement and not just String
+- Fix onclick stuff

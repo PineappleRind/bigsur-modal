@@ -96,7 +96,7 @@
             <h2 class="text-gray-100 font-extralight text-3xl">Home</h2>
             <p>Big Sur Modal is a lightweight <b>(2.1KB minified)</b> library that you can use to make modals in the style of MacOS Big sur. Click here for a demo:
             </p>
-            <button class="bg-blue-500 text-white px-4 py-2 rounded-xl" onclick="modal.show()">Show</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-xl" onclick="modal.init()">Show</button>
             <br>
         </div>
         <hr>
@@ -115,10 +115,10 @@
         <div id="usage">
             <h2 class="text-gray-100 font-extralight text-3xl">Usage</h2>
             <p>
-                To use Big Sur Modal, declare a variable containing the BigSurModal object:</p>
+                Initialize a modal:</p>
             <code class="code">
                     <pre>
-<span class="js-key">var </span><span class="js-var">modal </span>= <span class="js-key">new </span><span class="js-func">BigSurModal</span>({
+<span class="js-key">var </span><span class="js-var">modal </span>= <span class="js-key">new </span><span class="js-func">bigSur.Modal</span>({
     <span class="js-com">//arguments here, more info in customization section</span>
 })</pre></code>
             <p>Then initialize it with the .show() function:</p>
@@ -184,7 +184,7 @@
     <script src="src/index.js"></script>
     <script>
         //setTimeout(function(){
-        var modal = new BigSurModal({
+        var modal = new bigSur.Modal({
                 title: "A Big Sur Modal!",
                 description: "This is a big sur modal.",
                 theme: 'dark',
@@ -194,9 +194,11 @@
                 }, {
                     name: "OK",
                     default: true,
-                    function: 'alert(\'You can add a JavaScript function to be called on each button click!\')'
+                    function: function(){
+                        alert('You can add a JavaScript function to be called on each button click!')
+                    }
                 }],
-                //appIcon: 'console_logo.png'
+                appIcon: 'console_logo.png'
             })
             //})
     </script>

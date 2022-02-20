@@ -85,12 +85,12 @@
     pointer-events: all
 }
 
-.BSM-modal .BSM-btns button.true {
+.BSM-modal .BSM-btns button.BSM-default-true {
     background: linear-gradient(#2891ff, #027aff);
     color: #fff
 }
 
-.BSM-modal .BSM-btns button.false {
+.BSM-modal .BSM-btns button.BSM-default-false {
     background: rgb(181, 181, 181);
     color: #575757
 }
