@@ -1,4 +1,4 @@
-The documentation is over [here](https://pineapplerind.ga/libraries/bigsur-modal/index.html), this is that documentation but ported to a markdown file for convenience
+The documentation is over [here](https://pineapplerind.xyz/libraries/bigsur-modal/index.html), this is that documentation but ported to a markdown file for convenience
 
 # Big Sur Modal Docs
 Big Sur Modal is a lightweight **(2.1KB minified)** library that you can use to make modals in the style of MacOS Big sur.
